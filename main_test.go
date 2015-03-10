@@ -108,3 +108,13 @@ func TestFall_2D(t *testing.T) {
 		t.Errorf("Expeded %s, got %s", expect, result)
 	}
 }
+
+func TestWrongSecretLenght(t *testing.T) {
+	tmp := secret
+	secret = "123"
+	_, err := getHmacString("123456")
+	if err == nil {
+		t.Error(err)
+	}
+	secret = tmp
+}
