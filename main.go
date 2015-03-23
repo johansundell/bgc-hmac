@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-var secret string = "1234567890ABCDEF1234567890ABCDEF"
+var secret = "1234567890ABCDEF1234567890ABCDEF"
 
 func main() {
 	mess := "00000000"
